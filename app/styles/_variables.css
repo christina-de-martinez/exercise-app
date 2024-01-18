@@ -1,0 +1,106 @@
+/* VARIABLES */
+:root {
+  /* colors */
+
+  /* light defaults */
+  --color-base_light: #fbfefe;
+  --color-bkg_light: #edf9f9;
+  --color-text_light: #001c1e;
+  --color-accent_light: #1ec2cc;
+  --color-error_light: #ee6565;
+  --color-muted_light: #9ba4a5;
+  --shadow_light: 0 6px 15px hsl(184 100% 6% / 0.1);
+
+  /* dark defaults */
+  --color-base_dark: #043237;
+  --color-bkg_dark: #001c1e;
+  --color-text_dark: #edf9f9;
+  --color-accent_dark: #1fa7ae;
+  --color-error_dark: #d74e4e;
+  --color-muted_dark: #8eb0b4;
+  --shadow_dark: 0 15px 6px hsl(184 100% 4%);
+
+  /* set defaults */
+  --color-base: var(--color-base_light);
+  --color-bkg: var(--color-bkg_light);
+  --color-text: var(--color-text_light);
+  --color-accent: var(--color-accent_light);
+  --color-error: var(--color-error_light);
+  --color-muted: var(--color-muted_light);
+  --shadow: var(--shadow_light);
+  color-scheme: light dark;
+
+  /* font sizes */
+  --fs-2xs: clamp(0.64rem, 0.6552rem + -0.0196vw, 0.6513rem);
+  --fs-xs: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
+  --fs-sm: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
+  --fs-base: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+  --fs-md: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
+  --fs-lg: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
+  --fs-xl: clamp(1.9438rem, 1.7707rem + 0.8652vw, 2.4413rem);
+  --fs-2xl: clamp(2.3325rem, 2.0823rem + 1.2511vw, 3.0519rem);
+  --fs-3xl: clamp(2.7994rem, 2.4461rem + 1.7663vw, 3.815rem);
+
+  /* line height */
+  --lh-base: 1.4;
+  --lh-headings: 1.1;
+
+  /* spacings */
+  --space-4xs: clamp(0.1875rem, 0.1875rem + 0vw, 0.1875rem);
+  --space-3xs: clamp(0.3125rem, 0.3125rem + 0vw, 0.3125rem);
+  --space-2xs: clamp(0.625rem, 0.6033rem + 0.1087vw, 0.6875rem);
+  --space-xs: clamp(0.875rem, 0.8533rem + 0.1087vw, 0.9375rem);
+  --space-sm: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+  --space-md: clamp(1.6875rem, 1.6223rem + 0.3261vw, 1.875rem);
+  --space-lg: clamp(2.25rem, 2.163rem + 0.4348vw, 2.5rem);
+  --space-xl: clamp(3.375rem, 3.2446rem + 0.6522vw, 3.75rem);
+  --space-2xl: clamp(4.5rem, 4.3261rem + 0.8696vw, 5rem);
+  --space-3xl: clamp(6.75rem, 6.4891rem + 1.3043vw, 7.5rem);
+
+  /* radiuses */
+  --rounded-sm: 0.5rem;
+  --rounded-full: 100vmax;
+
+  /* transition speed */
+  --fast: 0.1s;
+  --slow: 0.3s;
+
+  /* easing */
+  --cubic: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* THEMING MODE */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-base: var(--color-base_dark);
+    --color-bkg: var(--color-bkg_dark);
+    --color-text: var(--color-text_dark);
+    --color-accent: var(--color-accent_dark);
+    --color-error: var(--color-error_dark);
+    --color-muted: var(--color-muted_dark);
+    --shadow: var(--shadow_dark);
+    color-scheme: dark light;
+  }
+}
+
+[data-theme="dark"] {
+  --color-base: var(--color-base_dark);
+  --color-bkg: var(--color-bkg_dark);
+  --color-text: var(--color-text_dark);
+  --color-accent: var(--color-accent_dark);
+  --color-error: var(--color-error_dark);
+  --color-muted: var(--color-muted_dark);
+  --shadow: var(--shadow_dark);
+  color-scheme: dark light;
+}
+
+[data-theme="light"] {
+  --color-base: var(--color-base_light);
+  --color-bkg: var(--color-bkg_light);
+  --color-text: var(--color-text_light);
+  --color-accent: var(--color-accent_light);
+  --color-error: var(--color-error_light);
+  --color-muted: var(--color-muted_light);
+  --shadow: var(--shadow_light);
+  color-scheme: light dark;
+}
