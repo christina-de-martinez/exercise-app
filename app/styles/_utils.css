@@ -1,0 +1,27 @@
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-shadow {
+  --_text-shadow-color: var(--color-text);
+  text-shadow: 0.07em 0.07em var(--_text-shadow-color);
+}
+
+.text-yellow {
+  color: var(--color-accent-yellow);
+}
+.text-orange {
+  color: var(--color-accent-orange);
+}
+.text-green {
+  color: var(--color-accent-green);
+}
+.text-pink {
+  color: var(--color-accent-pink);
+}
+.text-purple {
+  color: var(--color-accent-purple);
+}
+.text-muted {
+  color: var(--color-accent-muted);
+}
