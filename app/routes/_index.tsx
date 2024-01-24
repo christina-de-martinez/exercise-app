@@ -1,7 +1,9 @@
 import type { MetaFunction } from "@remix-run/node";
 import FlexiWork from "~/components/icons/FlexiWork";
 import Logomark from "~/components/icons/Logomark";
-import Input from "~/components/ui/Input";
+import Form from "~/components/ui/form/Form";
+import Input from "~/components/ui/form/Input";
+import Label from "~/components/ui/form/Label";
 
 export const meta: MetaFunction = () => {
   return [
@@ -18,7 +20,10 @@ export default function Index() {
         <Logomark />
       </div>
       <h1>Welcome to Remix</h1>
-      <Input onChange={() => {}} type="text" />
+      <Form onSubmit={() => {}}>
+        <Label htmlFor="name">Name</Label>
+        <Input type="name" id="name" name="name" onChange={() => {}} />
+      </Form>
     </div>
   );
 }
