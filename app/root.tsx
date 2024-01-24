@@ -1,3 +1,4 @@
+import { cssBundleHref } from "@remix-run/css-bundle";
 import type { LinksFunction } from "@remix-run/node";
 import {
   Links,
@@ -10,7 +11,10 @@ import {
 
 import styles from "./styles/shared.css";
 
-export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
+export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: cssBundleHref ? cssBundleHref : styles },
+  { rel: "stylesheet", href: styles },
+];
 
 export default function App() {
   return (

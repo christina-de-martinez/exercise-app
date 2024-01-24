@@ -6,7 +6,7 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
+const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
   { onChange, ...rest },
   ref
 ) {
@@ -15,4 +15,4 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
   );
 });
 
-Input.displayName = "Input";
+export default Input;
