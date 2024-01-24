@@ -7,22 +7,21 @@
   text-shadow: 0.07em 0.07em var(--_text-shadow-color);
 }
 
-/* do we want to use a mix of markup and CSS in styling? or just stick with CSS files—no markup?*/
-[data-color="yellow"] {
+.text-yellow {
   color: var(--color-accent-yellow);
 }
-[data-color="orange"] {
+.text-orange {
   color: var(--color-accent-orange);
 }
-[data-color="green"] {
+.text-green {
   color: var(--color-accent-green);
 }
-[data-color="pink"] {
+.text-pink {
   color: var(--color-accent-pink);
 }
-[data-color="purple"] {
+.text-purple {
   color: var(--color-accent-purple);
 }
-[data-color="muted"] {
+.text-muted {
   color: var(--color-accent-muted);
 }
